@@ -1,0 +1,52 @@
+.match-button-new{
+    height: 140px;
+    max-height: 140px;
+    display: flex;
+}
+.match-picture-container{
+    margin: 24px 14px 24px 10px;
+}
+.match-picture{
+    height: 92px;
+    width: 92px;
+    border-radius: 100%;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #3d87ac;
+    border-color: #763097;
+    /*
+    #3d87ac
+    #763097
+    */
+}
+.match-data{
+    margin-right: 20px;
+    margin-bottom: 6px;
+    margin-top: 32px;
+    width: 286px;
+}
+.match-name{
+    font-size: 14px;
+    font-weight: 500;
+}
+.match-age{
+    font-size: 12px;
+    font-weight: lighter;
+}
+.match-content{
+    font-size: 14px;
+    
+}
+.message-date{
+    font-size: 8px;
+    color:gray;
+    margin-right: 0;
+    margin-left: auto;
+}
+.date{
+    background-image: linear-gradient(to right, #3d87ac, #763097);
+    color: white;
+}
+.match-button-new.selected{
+    background: rgb(222, 219, 226);
+}

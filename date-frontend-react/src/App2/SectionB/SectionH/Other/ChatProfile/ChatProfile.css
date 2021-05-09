@@ -1,0 +1,31 @@
+.small-profile{
+    display: flex;
+    align-self: center;
+    margin-left: 19px;
+}
+.data{
+    margin-left: 5px;
+    margin-top: 10px;
+}
+.small-profile-img{
+    width:100px; 
+    height:100px;
+    border-radius: 100%;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #763097;;
+}
+p{
+    line-height: 0.5;
+}
+h2.partner-name{
+    line-height: 0.8;
+    color: #763097;
+    font-size: 24px;
+}
+h3.partner-age{
+    line-height:0.2;
+    color: #763097;
+    font-size: 18px;
+    font-weight: lighter;
+}

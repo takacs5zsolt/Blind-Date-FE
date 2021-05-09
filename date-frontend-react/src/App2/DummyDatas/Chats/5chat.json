@@ -1,0 +1,71 @@
+{
+    "Profile":
+    {
+            "UserID": 5,
+            "UserName": "Csokonyai",
+            "Age": 21,
+            "Male": false,
+            "PlusData": {},
+            "ProfileType": "RestrictedProfile",
+            "Verified": false,
+            "Abilities":
+            {
+                "LikeAble": true,
+                "ShareAlbum": true,
+                "DislikeAble": true
+            }
+    },
+	"Messages":
+    [
+        {
+            "MessageID": 16,
+            "MatchID":null,
+            "SenderID": 5,
+            "MessageDate": 20210424153434,
+            "Content": "Szia :)",
+            "ContentType":  "String",
+            "DateID": 1,
+            "Read": false
+        },
+        {
+            "MessageID": 17,
+            "MatchID":null,
+            "SenderID": 1,
+            "MessageDate": 20210424153434,
+            "Content": "aizS",
+            "ContentType":  "String",
+            "DateID": 1,
+            "Read": false
+        },
+        {
+            "MessageID": 18,
+            "MatchID":null,
+            "SenderID": 5,
+            "MessageDate": 20210424153434,
+            "Content": "mizu",
+            "ContentType":  "String",
+            "DateID": 1,
+            "Read": false
+        },
+        {
+            "MessageID": 19,
+            "MatchID":null,
+            "SenderID": 5,
+            "MessageDate": 20210424153434,
+            "Content": "??????",
+            "ContentType":  "String",
+            "DateID": 1,
+            "Read": false
+        },
+        {
+            "MessageID": 20,
+            "MatchID":null,
+            "SenderID": 1,
+            "MessageDate": 20210424153434,
+            "Content": "demagasvagy",
+            "ContentType":  "String",
+            "DateID": 1,
+            "Read": false
+        }
+    ]
+}

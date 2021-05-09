@@ -1,0 +1,35 @@
+.matches-container{
+    min-width: 15vw;
+    max-width: 30vw;
+    /*
+    width: 30%;
+    background-color: rgba(220,220,220,1);
+    */
+    background-color: #02142b;
+    overflow: auto;
+    padding-right: 1%;
+}
+.icon{
+    max-width: 50%;
+    margin: 30px auto;
+}
+.icon-dating{
+    width:70px;
+    height:70px;
+    margin: 0 25px;
+    
+}
+.icon-holder{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    max-width: 100%;
+    margin: 10px auto;
+    /*
+    */
+}
+.icon-holder:hover{
+    /*
+    */
+    background-image: linear-gradient(to right, rgba(87,195,247,0.3), rgba(187,68,157,0.3));
+}

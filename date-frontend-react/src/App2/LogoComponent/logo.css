@@ -1,0 +1,26 @@
+.colorized{
+    font-weight: bolder;
+    background-image: linear-gradient(to right, rgb(241, 104, 230), rgb(0, 153, 255));
+    /* nem kell! background: -webkit-linear-gradient(to right, rgb(241, 104, 230), rgb(20, 103, 170));*/
+    /* lehet hogy kell! -webkit-background-clip: text;*/
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.logo{
+    height: 50px;
+
+}
+.logo-text{
+    font-size: 13px;
+    margin-top:auto;
+    margin-bottom: auto;
+}
+
+.logo-container{
+    display: flex;
+    max-width: 193px;
+    max-height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 36px;
+}

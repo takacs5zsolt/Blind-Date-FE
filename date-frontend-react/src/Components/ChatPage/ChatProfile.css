@@ -1,0 +1,50 @@
+.chat-profile{
+    position: -webkit-sticky;
+    position: sticky;
+    top:0px;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    /*
+    background-color: rgba(255,255,255,0.3);
+    */
+    background-color: rgba(2,20,43,0.7);
+    border-radius: 0 0 500px 500px;
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.chat-profile-photo{
+    max-width: 100px;
+    width: 30%;
+    border-radius: 300px;
+
+    border-color:white;
+    border-style: solid;
+    border-width: 3px;
+    padding: 5px;
+
+    margin: 10px 5px;
+}
+.data-pos{
+    display:flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.data-pos p{
+    color:white;
+    font-size: 2rem;
+}
+@media only screen and (max-width: 1200px){
+    .data-pos p{
+        font-size: 1rem;
+    }
+}
+@media only screen and (max-width: 600px){
+    .data-pos{
+        display: block;
+        text-align: center;
+    }
+    .data-pos p{
+        font-size: 1rem;
+    }
+}

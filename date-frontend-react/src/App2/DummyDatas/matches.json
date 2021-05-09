@@ -1,0 +1,145 @@
+{
+    "Matches":
+    [
+        { 
+            "Profile":
+            { 
+                "UserID": 2,
+                "UserName": "Eszti baba",
+                "Age": 22,
+                "Male": false,
+                "PlusData": {},
+                "ProfileType": "FullProfile",
+                "Verified": true,
+                "Abilities":
+                {
+                    "LikeAble": false,
+                    "ShareAlbum": false,
+                    "DislikeAble": true
+                },
+                "Photo1": "https://scontent-vie1-1.xx.fbcdn.net/v/t1.6435-9/48181072_2242166829151265_3431243750662209536_n.jpg?_nc_cat=108&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=xh7odv-UnTsAX_Pf1EL&_nc_ht=scontent-vie1-1.xx&oh=523d0f598d3941972a5ae3427b16ca50&oe=609F7E5C",
+                "Photo2": "",
+                "Photo3": "",
+                "Photo4": "",
+                "Photo5": ""
+            },
+			"Messages":
+            [
+                {  
+                    "MessageID": 4,
+                    "MatchID": 1,
+                    "SenderID": 2,
+                    "MessageDate": 20210424153434,
+                    "Content": "kurvajo xd",
+                    "ContentType":  "String",
+                    "DateID": null,
+                    "Read": true
+                }
+            ]
+        },
+        { 
+            "Profile":
+            { 
+                "UserID": 3,
+                "UserName": "Johedli",
+                "Age": 21,
+                "Male": false,
+                "PlusData": {},
+                "ProfileType": "FullProfile",
+                "Verified": false,
+                "Abilities":
+                {
+                    "LikeAble": false,
+                    "ShareAlbum": false,
+                    "DislikeAble": true
+                },
+                "Photo1": "https://scontent-vie1-1.xx.fbcdn.net/v/t1.6435-9/140273250_1017447949075027_5474515745330302463_n.jpg?_nc_cat=101&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=_kGW9k8lt0sAX93EI_d&_nc_ht=scontent-vie1-1.xx&oh=a2cc1dfec40d2fa6d79c7e247ccc9629&oe=60A01746",
+                "Photo2": "",
+                "Photo3": "",
+                "Photo4": "",
+                "Photo5": ""
+            },
+			"Messages":
+            [
+                {  
+                    "MessageID": 9,
+                    "MatchID": 2,
+                    "SenderID": 1,
+                    "MessageDate": 20210424153434,
+                    "Content": "mivan nigger",
+                    "ContentType":  "String",
+                    "DateID": null,
+                    "Read": true
+                }
+            ]
+        },
+        { 
+            "Profile":
+            { 
+                "UserID": 4,
+                "UserName": "MILF",
+                "Age": 25,
+                "Male": true,
+                "PlusData": {},
+                "ProfileType": "FullProfile",
+                "Verified": true,
+                "Abilities":
+                {
+                    "LikeAble": false,
+                    "ShareAlbum": false,
+                    "DislikeAble": true
+                },
+                "Photo1": "https://scontent-vie1-1.xx.fbcdn.net/v/t1.6435-9/74226625_2591153220965456_4271945274861027328_n.jpg?_nc_cat=110&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=MfSMbY5Gx-4AX9DjPFC&_nc_ht=scontent-vie1-1.xx&oh=e9cf63ce41592da9502532876a6f7cf5&oe=60A00981",
+                "Photo2": "",
+                "Photo3": "",
+                "Photo4": "",
+                "Photo5": ""
+            },
+			"Messages":
+            [
+                {  
+                    "MessageID": 15,
+                    "MatchID": 3,
+                    "SenderID": 4,
+                    "MessageDate": 20210424153434,
+                    "Content": "tetszik az esernyom?",
+                    "ContentType":  "String",
+                    "DateID": null,
+                    "Read": false
+                }
+            ]
+        }
+    ],
+    "Date":
+    {
+	    "Profile":
+        {
+            "UserID": 5,
+            "UserName": "Csokonyai",
+            "Age": 21,
+            "Male": false,
+            "PlusData": {},
+            "ProfileType": "RestrictedProfile",
+            "Verified": false,
+            "Abilities":
+            {
+                "LikeAble": true,
+                "ShareAlbum": true,
+                "DislikeAble": true
+            }
+        },
+	    "Messages":
+        [
+            {
+                "MessageID": 20,
+                "MatchID":null,
+                "SenderID": 1,
+                "MessageDate": 20210424153434,
+                "Content": "demagasvagy",
+                "ContentType":  "String",
+                "DateID": 1,
+                "Read": false
+            }
+        ]
+    }
+}

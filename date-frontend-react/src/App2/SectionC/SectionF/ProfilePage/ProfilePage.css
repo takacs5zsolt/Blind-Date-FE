@@ -1,0 +1,22 @@
+.main-photo{
+    width: 200px;
+    height:200px;
+    border-radius: 100%;
+    border-style: solid;
+    border-color: #763097;
+    border-width: 10px;
+    margin: 102px 0 auto;
+}
+.center-data{
+    text-align: center;
+}
+.name{
+    line-height: 0.5;
+    color: #763097;
+    font-size: 24px;
+}
+.age{
+    line-height:0.2;
+    color: #763097;
+    font-size: 18px;
+}

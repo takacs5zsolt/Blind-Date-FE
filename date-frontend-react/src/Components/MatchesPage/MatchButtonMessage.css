@@ -1,0 +1,13 @@
+.match-button-message{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.message{
+    color:white;
+    font-size: 20px;
+}
+.message-date{
+    color:grey;
+    font-size: 13px;
+}

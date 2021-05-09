@@ -1,0 +1,44 @@
+.chat-bubble{
+    width: fit-content;
+    word-wrap: break-word;
+    margin: 10px 0;
+    padding: 20px;
+    max-width: 800px;
+    font-weight: bold;
+
+
+}
+.self-bubble{
+    margin-right: 10px;
+    margin-left: auto;
+    /*
+    background-color: khaki;
+    */
+    /*
+    background-color: #31e981;
+    */
+    background-color: #bb449d;
+    color:white;
+    border-radius: 50px 0 50px 50px;
+}
+.other-bubble{
+    margin-left: 10px;
+    margin-right:auto;
+    /*
+    background-color: lawngreen;
+    background-color: #35605a;
+    */
+    
+    background-color:#57c3f7;
+    color:black;
+    border-radius: 0 50px 50px 50px;
+}
+.message-date{
+    font-size: 14px;
+    text-align: right;
+    color:rgb(0,0,0);
+    font-weight: lighter;
+}
+.message-photo{
+    text-align: center;
+}

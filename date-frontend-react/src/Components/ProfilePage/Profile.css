@@ -1,0 +1,58 @@
+.profile-page{
+    width: 70%;
+    /*
+    background-color: rgb(220,220,220);
+    */
+    background-color: #02142B;
+    color:white;
+    margin: auto;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: 50px;
+    padding-bottom: 30px;
+
+    box-shadow: 0 0 500px rgba(215, 129, 255, 0.5);
+}
+.photo-container{
+    margin-top: 100px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.photo-hr{
+    display:none;
+}
+@media only screen and (max-width: 1400px){
+    .photo-container{
+        display: block;
+    }
+    .photo-hr{
+        display: block;
+        height: 1px;
+    }
+    .abilities{
+        display: block;
+    }
+}
+.abilities{
+    max-width: 80%;
+    margin: 0 auto;
+}
+.profile-photo{
+    width: 100px;
+    height: 100px;
+    border-style: solid solid solid solid;
+    border-width: 5px 5px 20px 5px;
+    border-color: white;
+    box-shadow: 0 0 50px black;
+}
+.photo-element{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.hidden-btn{
+    display: none;
+}

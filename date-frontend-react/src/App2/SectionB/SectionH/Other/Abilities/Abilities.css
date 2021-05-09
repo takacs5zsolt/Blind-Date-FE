@@ -1,0 +1,12 @@
+
+.ability-container{
+    display: flex;
+    justify-content: space-evenly;
+
+    /*
+    margin: auto 17px 7px auto;
+    width: 250px;
+    height: 140px;
+    align-items: flex-end;
+    */
+}

@@ -1,0 +1,76 @@
+.input-box{
+    border: solid 1px #763097;
+    border-radius: 10px;
+    padding: 0 8px;
+
+    margin: 0 40px 40px 40px;
+}
+.input-box-padding{
+    padding: 20px 8px;
+}
+
+.input-line{
+    display: flex;
+    align-items: center;
+    position: relative;
+/*
+    border: solid 1px #763097;
+    border-radius: 10px;
+    padding: 0 8px;
+
+    margin: 0 40px 40px 40px; */
+}
+.input-line .inputField{
+    border: none;
+    outline: 0;
+    width: 100%;
+    padding: 16px 0 10px;
+    font-size: 16px;
+    background: #F6eaf8;
+}
+.input-line label{
+    position: absolute;
+    font-size: 16px;
+    font-weight: bold;
+    transform-origin: top left;
+    transform: translate(0, -24px) scale(1);
+    background: #F6eaf8;
+    padding: 0 10px;
+    color: #763097;
+}
+.input-box label{
+    position: absolute;
+    font-size: 16px;
+    font-weight: bold;
+    transform-origin: top left;
+    transform: translate(0, -24px) scale(1);
+    background: #F6eaf8;
+    padding: 0 10px;
+    color: #763097;
+}
+.input-box input{
+    border: none;
+    outline: 0;
+    width: 100%;
+    padding: 16px 0 10px;
+    font-size: 16px;
+}
+.input-box-padding label{
+    transform: translate(0, -32px) scale(1);
+}
+.input-radio-group{
+    padding:20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.input-radio-group div{
+    width: 30px;
+}
+.input-radio{
+    background-color: #763097;
+    margin: 0 auto;
+}
+.main-container{
+    background: #F6eaf8;
+}

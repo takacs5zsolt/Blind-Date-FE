@@ -1,0 +1,42 @@
+.userprofile-photo{
+    display: block;
+    width: 120px;
+    height: 120px;
+    margin: 10px;
+
+    border-radius: 100%;
+}
+.profile{
+    display: flex;
+    height: 140px;
+}
+.basic-data{
+    margin-top:5px;
+}
+.user-name{
+    font-size: 34px;
+    line-height: 0.1;
+}
+.user-age{
+    font-size: 18px;
+}
+.icons{
+    margin-right: 20px;
+    margin-left: auto;
+    width: 135px;
+    height: 75px;
+    margin-top: auto;
+    margin-bottom:10px;
+}
+.settings{
+    width: 75px;
+    height: 75px;
+    border-radius: 100%;
+    margin-right: 5px;
+}
+.logout{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    margin-left: 5px;
+}

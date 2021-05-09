@@ -1,0 +1,116 @@
+.h{
+    display:flex; 
+    justify-content:space-between;
+    background-color: #F6eaf8;
+    height: 190px;
+    max-height: 190px;
+}
+.h .ability-container{
+    margin: auto 17px 7px auto;
+    width: 250px;
+    height: 140px;
+    align-items: flex-end;
+    /*
+    display: flex;
+    justify-content: space-evenly;
+    */
+}
+.h .secondary-holder{
+    height: fit-content;
+    margin-top:auto;
+    margin-bottom: auto;
+}
+.h .main-holder{
+    height: fit-content;
+    margin-top:auto;
+    margin-bottom: auto;
+}
+button.main-button{
+    background-color: #763097;
+    width: 150px;
+    height: 50px;
+    color:white;
+    font-size: 24px;
+    font-weight: bolder;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 300px;
+    margin: 5px;
+}
+button.secondary-button{
+    background-color: #F6eaf8;
+    width: 150px;
+    height: 50px;
+    color:#763097;
+    font-size: 16px;
+    font-weight: lighter;
+    padding: 8px 12px;
+    border: solid;
+    border-color: #763097;
+    border-width: 1px;
+    border-radius: 300px;
+    margin:2px;
+}
+button.secondary-button:hover{
+    background-color: #e7f0f5;
+    color:#3d87ac;
+    border-color: #3d87ac;
+    cursor: pointer;
+    /*
+    width: 150px;
+    height: 50px;
+    font-size: 16px;
+    font-weight: lighter;
+    padding: 8px 12px;
+    border: solid;
+    border-width: 1px;
+    border-radius: 300px;
+    margin:2px;
+    */
+}
+button.support-button{
+    background-color: #F6eaf8;
+    color:gray;
+    font-size: 16px;
+    font-weight: lighter;
+    padding: 8px 12px;
+    border: solid;
+    border-color: gray;
+    border-width: 1px;
+    border-radius: 300px;
+    margin:2px;
+}
+button.support-button:hover{
+    color:#763097;
+    border-color: #763097;
+    /*
+    background-color: #F6eaf8;
+    font-size: 16px;
+    font-weight: lighter;
+    padding: 8px 12px;
+    border: solid;
+    border-width: 1px;
+    border-radius: 300px;
+    margin:2px;
+    */
+}
+button.main-button.loading-button{
+    background-image:linear-gradient(to right, rgba(0,0,0,0),#3d87ac, rgba(0,0,0,0));
+    background-size: 400% 400%;
+    animation: loading 1s linear infinite alternate;
+    font-size: 14px;
+}
+@keyframes loading{
+    0% {background-position: 100% 0%;}
+    50% {background-position: 50% 0%;}
+    100% {background-position: 0% 0%;}
+    /*
+    0% {background-position: 100% 100%;}
+    50% {background-position: 50% 50%;}
+    100% {background-position: 0% 0%;}
+    */
+}
+button.main-button:hover{
+    background-color: #582570;
+    cursor: pointer;
+}

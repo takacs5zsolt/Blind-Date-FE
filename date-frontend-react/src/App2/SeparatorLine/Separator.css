@@ -1,0 +1,6 @@
+.line1{
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0,0,0,0),#3d87ac, #763097,rgba(0,0,0,0));
+    max-width: 200px;
+    margin: 16px auto;
+}

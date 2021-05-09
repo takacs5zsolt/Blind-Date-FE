@@ -1,0 +1,37 @@
+.chat-input{
+    position: -webkit-sticky;
+    position: sticky;
+    bottom:0px;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    /*
+    background-color: rgba(255,255,255,0.3);
+    */
+    background-color: rgba(2,20,43,0.7);
+    border-radius: 50px 50px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    max-width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.input-icon{
+    width:30%;
+    margin: 0 9%;
+}
+.input-icon-container{
+    /*
+    margin: 20px;
+    */
+    display: flex;
+}
+.input-field{
+    margin:7%;
+    width: 40%;
+}
+.chats{
+    max-width: 500px;
+    margin: 0 auto;
+}

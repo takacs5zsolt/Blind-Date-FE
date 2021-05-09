@@ -1,0 +1,22 @@
+{
+    "UserID":1,
+    "UserName": "Zsé",
+    "Age":"26",
+    "Male":"true",
+    "PlusData":"",
+    "ProfileType":"FullUserProfile",
+    "Verified":"true",
+    "Abilities":{},
+    "Photo1":"https://scontent-vie1-1.xx.fbcdn.net/v/t31.18172-8/914027_669185179772592_155828895_o.jpg?_nc_cat=104&ccb=1-3&_nc_sid=174925&_nc_ohc=2rn-jGmLAxwAX--0_E5&_nc_ht=scontent-vie1-1.xx&oh=569f4a33bbf4050779526c6f9fa8fc34&oe=609EA3E9",
+    "Photo2":"https://scontent-vie1-1.xx.fbcdn.net/v/t31.18172-8/856305_560539763970468_1120683157_o.jpg?_nc_cat=111&ccb=1-3&_nc_sid=de6eea&_nc_ohc=o0ljBZgWN7wAX9lQ6kj&_nc_ht=scontent-vie1-1.xx&oh=ffd302e5d65fe7fe737c8c072fb3f4de&oe=609FE62C",
+    "Photo3":"https://scontent-vie1-1.xx.fbcdn.net/v/t31.18172-8/326883_500381683319610_842127460_o.jpg?_nc_cat=102&ccb=1-3&_nc_sid=174925&_nc_ohc=XRi9VKAluKoAX_vPZKR&_nc_ht=scontent-vie1-1.xx&oh=dc1cacd70cac8641b6d8e13ebf3b6f52&oe=609E2EB6",
+    "Photo4":"",
+    "Photo5":"",
+    "Email":"zsolt@gmail.com",
+    "Interested":"false",
+    "MinAge":"20",
+    "MaxAge":"28",
+    "RegisteredDate":"2021-01-02",
+    "SubscriptionLevel":"0"
+}
+    

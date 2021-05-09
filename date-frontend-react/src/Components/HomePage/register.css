@@ -1,0 +1,9 @@
+.success-show{
+    display: block;
+    color:green;
+    font-size: 25px;
+    font-weight: bolder;
+}
+.success-hidden{
+    display: none;
+}

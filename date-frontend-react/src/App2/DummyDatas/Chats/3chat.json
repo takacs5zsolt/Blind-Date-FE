@@ -1,0 +1,75 @@
+{ 
+    "Profile":
+    { 
+        "UserID": 3,
+        "UserName": "Johedli",
+        "Age": 21,
+        "Male": false,
+        "PlusData": {},
+        "ProfileType": "FullProfile",
+        "Verified": false,
+        "Abilities":
+        {
+            "LikeAble": false,
+            "ShareAlbum": false,
+            "DislikeAble": true
+        },
+        "Photo1": "https://scontent-vie1-1.xx.fbcdn.net/v/t1.6435-9/140273250_1017447949075027_5474515745330302463_n.jpg?_nc_cat=101&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=_kGW9k8lt0sAX93EI_d&_nc_ht=scontent-vie1-1.xx&oh=a2cc1dfec40d2fa6d79c7e247ccc9629&oe=60A01746",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo4": "",
+        "Photo5": ""
+    },
+    "Messages":
+    [
+        {  
+            "MessageID": 5,
+            "MatchID": 2,
+            "SenderID": 1,
+            "MessageDate": 20210424153434,
+            "Content": "Szoszvanmooooo",
+            "ContentType":  "String",
+            "DateID": null,
+            "Read": true
+        },{  
+            "MessageID": 6,
+            "MatchID": 2,
+            "SenderID": 3,
+            "MessageDate": 20210424153434,
+            "Content": "CIRKULACIOOOOOOOOOO",
+            "ContentType":  "String",
+            "DateID": null,
+            "Read": true
+        },
+        {  
+            "MessageID": 7,
+            "MatchID": 2,
+            "SenderID": 1,
+            "MessageDate": 20210424153434,
+            "Content": "megin depize?",
+            "ContentType":  "String",
+            "DateID": null,
+            "Read": true
+        },
+        {  
+            "MessageID": 8,
+            "MatchID": 2,
+            "SenderID": 3,
+            "MessageDate": 20210424153434,
+            "Content": "ja.",
+            "ContentType":  "String",
+            "DateID": null,
+            "Read": true
+        },
+        {  
+            "MessageID": 9,
+            "MatchID": 2,
+            "SenderID": 1,
+            "MessageDate": 20210424153434,
+            "Content": "mivan nigger",
+            "ContentType":  "String",
+            "DateID": null,
+            "Read": true
+        }
+    ]
+}
