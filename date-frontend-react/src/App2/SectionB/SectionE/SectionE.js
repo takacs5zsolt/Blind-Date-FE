@@ -19,7 +19,6 @@ import SeparatorLine from '../../SeparatorLine/Separator';
 
 import './SectionE.css';
 
-import { NavLink, Route, HashRouter, Switch, BrowserRouter as Router, Link } from 'react-router-dom';
 
 class SectionE extends React.Component {
     constructor(props) {
@@ -40,12 +39,8 @@ class SectionE extends React.Component {
         if (this.props.Profile.UserID == this.props.ViewedProfile.UserID) {
             return (
                 <div className='e-container'>
-                    <Route path="/email" render={(props) => {
-                        return (<h1>EmailChanger</h1>)
-                    }} />
-                    <Route path="/password" render={(props) =>{
-                        return(<h1>PasswordChanger</h1>)
-                    }} />
+                    <h1>EmailChanger</h1>
+                    <h1>PasswordChanger</h1>
                     <EditableProfile Profile={this.props.Profile} />
 
                 </div>
