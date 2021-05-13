@@ -29,7 +29,9 @@ class SectionB extends React.Component {
     constructor(props) {
         super(props);
         this.props = props;
-        //state;
+        this.state ={
+            clickedButton : null
+        }
     }
     componentDidMount() {
 
@@ -41,10 +43,19 @@ class SectionB extends React.Component {
         this.props.onVote(activity);
     }
     onEmailChange(){
-
+        this.setState({
+            clickedButton : "email"
+        })
     }
     onPasswordChange(){
-        
+        this.setState({
+            clickedButton : "password"
+        })
+    }
+    onCancel(){
+        this.setState({
+            clickedButton : null
+        })
     }
     render() {
         console.log("SECTION B: current viewedID is " + this.props.ViewedID);
@@ -58,11 +69,14 @@ class SectionB extends React.Component {
             return (
                 <div id="section-b" className="column2">
                     <UtilitySection />
-                    <EditButtons />
+                    <EditButtons onSave={this.onSave.bind(this)} 
+                        onEmailClick={this.onEmailChange.bind(this)} 
+                        onPasswordClick={this.onPasswordChange.bind(this)}
+                        onCancel={this.onCancel.bind(this)}/>
                     <div className='e-container'>
                         <h1>EmailChanger</h1>
                         <h1>PasswordChanger</h1>
-                        <EditableProfile Profile={this.props.Profile} />
+                        <EditableProfile Profile={this.props.Profile} ClickedButton={this.state.clickedButton}/>
                     </div>
                 </div>
             );
