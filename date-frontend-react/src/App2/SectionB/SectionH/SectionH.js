@@ -141,7 +141,7 @@ class SectionH extends React.Component {
         this.props.onVote(activity);
     }
     onEmailClick(){
-
+        
     }
     onPasswordClick(){
 
