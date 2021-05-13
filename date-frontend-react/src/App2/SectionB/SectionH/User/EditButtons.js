@@ -14,13 +14,15 @@ class EditButtons extends React.Component {
         this.props = props;
         this.state = {
             updating: false,
-            updated:false
+            updated:false,
+            clickedChanger: false
         }
     }
     componentWillMount(){
         this.setState({
             updating:false,
-            updated: false
+            updated: false,
+            clickedChanger : false
         })
     }
     getProfileInputs(){
@@ -104,17 +106,41 @@ class EditButtons extends React.Component {
     }
     onEmailChange(){
         console.log('Email changing');
+        this.setState({
+            clickedChanger : true
+        })
         this.props.onEmailClick();
     }
     onPasswordChange(){
         console.log('password changing');
+        this.setState({
+            clickedChanger : true
+        })
         this.props.onPasswordClick();
     }
     onExit(){
         localStorage.removeItem('DateApplication');
         window.location.reload();
     }
+    onCancel(){
+        console.log("Clicked on Cancel.");
+        this.setState({
+            clickedChanger : false
+        })
+        this.props.onCancel();
+    }
     render() {
+        var buttonToShow;
+        if(this.state.clickedChanger){
+            buttonToShow = <button 
+            className="secondary-button"
+            onClick={this.onCancel.bind(this)}> Mégsem </button>
+        }
+        else{
+            buttonToShow = <button 
+            className={this.state.updating? "main-button loading-button" :  "main-button" }
+            onClick={this.state.updating? ()=>{} : ()=>this.onSave()}>{this.state.updating ? "Továbbítás alatt..." : "Mentés"}</button>;
+        }
         return (
             <div className="h">
                 <div className="secondary-holder">
@@ -131,9 +157,7 @@ class EditButtons extends React.Component {
                         onClick={()=>this.onExit()}>Kilépés</button>
                 </div>
                 <div className="main-holder">
-                    <button 
-                        className={this.state.updating? "main-button loading-button" :  "main-button" }
-                        onClick={this.state.updating? ()=>{} : ()=>this.onSave()}>{this.state.updating ? "Továbbítás alatt..." : "Mentés"}</button>
+                    buttonToShow
                 </div>
             </div>
         )
