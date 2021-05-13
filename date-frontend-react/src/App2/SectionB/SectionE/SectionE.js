@@ -24,17 +24,10 @@ class SectionE extends React.Component {
     constructor(props) {
         super(props);
         this.props = props;
-        //state;
     }
     componentDidMount() {
 
     }
-    /*
-    componentWillReceiveProps(newProps) {
-        if (newProps.ViewedID !== this.state.viewedID)
-            this.setState({ viewedID: newProps.ViewedID });
-    }
-    */
     render() {
         if (this.props.Profile.UserID == this.props.ViewedProfile.UserID) {
             return (
