@@ -25,9 +25,6 @@ class SectionE extends React.Component {
         super(props);
         this.props = props;
     }
-    componentDidMount() {
-
-    }
     render() {
         if (this.props.Profile.UserID == this.props.ViewedProfile.UserID) {
             return (

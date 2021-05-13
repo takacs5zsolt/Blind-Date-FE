@@ -25,24 +25,14 @@ class EditableProfile extends React.Component {
         super(props);
         this.props = props;
         
-        //this.state = { profile: props.Profile };
-        //state;
     }
     componentDidMount() {
 
     }
-    /*
-    componentWillReceiveProps(newProps) {
-        if (newProps !== this.props)
-            this.setState({ profile: newProps.Profile });
-    }
-    */
     onClickSave() {
 
     }
     render() {
-        //var path = "/profile/" + this.state.profile.UserID;
-
         //RANGE SLIDER: https://refreshless.com/nouislider/
         //INFO from: https://stackoverflow.com/questions/4753946/html5-slider-with-two-inputs-possible
         //BG Music: https://www.youtube.com/watch?v=SjiSEvh6fJs&list=WL&index=1&t=2173s

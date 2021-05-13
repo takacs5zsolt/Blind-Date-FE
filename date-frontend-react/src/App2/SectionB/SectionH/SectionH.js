@@ -28,8 +28,6 @@ class SectionH extends React.Component {
     
     onSave() {
         //update profile
-
-
         this.props.onSave();
     }
     
