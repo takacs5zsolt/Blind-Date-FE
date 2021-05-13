@@ -190,9 +190,18 @@ class CredentialChangeButtons extends React.Component {
         this.setState({
             updating: true
         });
-        this.updateProfile();
+        if(this.props.Clicked == "email"){
+            this.updateEmail();
+        }
+        else if(this.props.Clicked == "password"){
+            this.updatePassword();
+        }
+        else{
+            return;
+        }
+        //this.updateProfile();
 
-        console.log("Profile is: " + JSON.stringify(this.getProfileInputs()));
+        //console.log("Profile is: " + JSON.stringify(this.getProfileInputs()));
 
     }
     onEmailChange() {
@@ -207,13 +216,9 @@ class CredentialChangeButtons extends React.Component {
     }
     render() {
         return (
-            <div className="h">
+            <div className="main-container">
                 <div className="secondary-holder">
-                    <button
-                        className="secondary-button"
-                        onClick={() => this.onEmailChange()}>E-mail módosítás
-                    </button>
-                    <div id="email-change-form">
+                    <div id="email-change-form" style={{display: this.props.Clicked == "email" ? "block" : "none"}}>
                         <div id="new-email-container-for-email" className="input-line input-box">
                             <label htmlFor="new-email-input-for-email">Az új e-mail címed:</label>
                             <input className="inputField"
@@ -239,10 +244,7 @@ class CredentialChangeButtons extends React.Component {
                             </input>
                         </div>
                     </div>
-                    <button
-                        className="secondary-button"
-                        onClick={() => this.onPasswordChange()}>Jelszó módosítás</button>
-                    <div id="password-change-form">
+                    <div id="password-change-form" style={{display: this.props.Clicked == "password" ? "block" : "none"}}>
                         <div id="new-password-container-for-password" className="input-line input-box">
                             <label htmlFor="new-password-input-for-password">Az új jelszavad:</label>
                             <input className="inputField"
@@ -268,9 +270,6 @@ class CredentialChangeButtons extends React.Component {
                             </input>
                         </div>
                     </div>
-                    <button
-                        className="support-button"
-                        onClick={() => this.onExit()}>Kilépés</button>
                 </div>
                 <div className="main-holder">
                     <button

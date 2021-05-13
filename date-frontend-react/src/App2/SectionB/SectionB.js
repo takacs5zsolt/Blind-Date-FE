@@ -24,6 +24,7 @@ import Chat from './SectionE/Other/Chat';
 import ProfilePage from '../SectionC/SectionF/ProfilePage/ProfilePage';
 import PhotoSection from '../SectionC/SectionF/PhotoSection/PhotoSection';
 import SeparatorLine from '../SeparatorLine/Separator';
+import CredentialChangeButtons from './SectionE/User/CredentialChangeButtons';
 
 class SectionB extends React.Component {
     constructor(props) {
@@ -74,8 +75,6 @@ class SectionB extends React.Component {
                         onPasswordClick={this.onPasswordChange.bind(this)}
                         onCancel={this.onCancel.bind(this)}/>
                     <div className='e-container'>
-                        <h1>EmailChanger</h1>
-                        <h1>PasswordChanger</h1>
                         <EditableProfile Profile={this.props.Profile} ClickedButton={this.state.clickedButton}/>
                     </div>
                 </div>
