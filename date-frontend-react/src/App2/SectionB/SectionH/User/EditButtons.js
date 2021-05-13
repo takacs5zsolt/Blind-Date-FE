@@ -6,7 +6,6 @@ import { getFullEndpoint, endpoints } from '../../../REST_API_COMMUNICATION/date
 import { getToken, saveToken } from '../../../REST_API_COMMUNICATION/token';
 import noUiSlider from "nouislider";
 
-import { NavLink, Route, HashRouter, Switch, BrowserRouter as Router, Link } from 'react-router-dom';
 
 
 class EditButtons extends React.Component {
@@ -119,18 +118,14 @@ class EditButtons extends React.Component {
         return (
             <div className="h">
                 <div className="secondary-holder">
-                    <Link to='/email'>
 
                     <button 
                         className="secondary-button"
                         onClick={()=>this.onEmailChange()}>E-mail módosítás</button>
-                    </Link>
-                    <Link to='/password'>
 
                     <button 
                         className="secondary-button"
                         onClick={()=>this.onPasswordChange()}>Jelszó módosítás</button>
-                    </Link>
                     <button 
                         className="support-button"
                         onClick={()=>this.onExit()}>Kilépés</button>
