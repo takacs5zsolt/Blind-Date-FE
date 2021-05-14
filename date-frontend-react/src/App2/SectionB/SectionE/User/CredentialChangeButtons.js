@@ -13,19 +13,11 @@ class CredentialChangeButtons extends React.Component {
         super(props);
         this.props = props;
         this.state = {
-            showEmailChange: false,
-            emailLoading: false,
-            emailResult: {
+            loading: false,
+            result: {
                 success: false,
                 description: null
-            },
-
-            showPasswordChange: false,
-            passwordLoading: false,
-            passwordResult: {
-                success: false,
-                description: null
-            },
+            }
         }
     }
     /*
@@ -37,26 +29,31 @@ class CredentialChangeButtons extends React.Component {
     }
     */
     getEmailInputs() {
-        var currentEmail = document.getElementById('current-email-input-for-email').value;
         var currentPassword = document.getElementById('current-password-input-for-email').value;
         var newEmail = document.getElementById('new-email-input-for-email').value;
         var data = {
-            EMail: currentEmail,
+            EMail: "",
             PassW: currentPassword,
             NewEmail: newEmail
         };
         return data;
     }
     getPasswordInputs() {
-        var currentEmail = document.getElementById('current-email-input-for-password').value;
         var currentPassword = document.getElementById('current-password-input-for-password').value;
         var newPassword = document.getElementById('new-password-input-for-password').value;
         var data = {
-            EMail: currentEmail,
+            EMail: "",
             PassW: currentPassword,
             NewPassword: newPassword
         };
         return data;
+    }
+    catchError(error){
+        this.setState({
+            result:{
+                description:error
+            }
+        })
     }
     updateEmail() {
         console.log('SAVING email...');
@@ -72,35 +69,42 @@ class CredentialChangeButtons extends React.Component {
             },
             body: JSON.stringify(data)
         }).then((res) => {
+            this.setState({
+                loading:false
+            })
+
             if (!res.ok) {
                 console.error("error during updating email");
-                throw Error(res.json());
+                this.setState({
+                    result:{
+                        success: false
+                    }
+                })
+               return res.json();
             }
             else {
                 console.log("update email was successful!");
+                this.setState({
+                    result:{
+                        success: true
+                    }
+                })
                 return res.json();
             }
         }).then((res) => {
             this.setState({
-                emailLoading : false,
-                emailResult:{
-                    success: true,
-                    description: res
+                result:{
+                    description: this.state.result.success ? res : res.Message
                 }
             })
         }
         )
-        /*
-        .then(() => {
-            this.props.onSave();
-        })*/
-        .catch(function(error){
+        .catch(error => {
             console.log(error);
             this.setState({
-                emailLoading : false,
-                emailResult:{
+                result:{
                     success: false,
-                    description: error
+                    description:"NINCS KAPCSOLAT..."
                 }
             })
         });
@@ -119,76 +123,50 @@ class CredentialChangeButtons extends React.Component {
             },
             body: JSON.stringify(data)
         }).then((res) => {
+            this.setState({
+                loading:false
+            })
             if (!res.ok) {
                 console.error("error during updating password");
-                throw Error(res.json());
+                this.setState({
+                    result:{
+                        success: false
+                    }
+                })
+                return res.json();
             }
             else {
                 console.log("update password was successful!");
+                this.setState({
+                    result:{
+                        success: true
+                    }
+                })
                 return res.json();
             }
         }).then((res) => {
             this.setState({
-                passwordLoading : false,
-                passwordResult:{
-                    success: true,
-                    description: res
+                result:{
+                    description: this.state.result.success ? res : res.Message
                 }
             })
         }
         )
-        /*
-        .then(() => {
-            this.props.onSave();
-        })*/
-        .catch(function(error){
+        .catch(error => {
             console.log(error);
             this.setState({
-                passwordLoading : false,
-                passwordResult:{
-                    success: false,
-                    description:error
+                result:{
+                    description:"NINCS KAPCSOLAT"
                 }
             })
         });
     }
-    /*
-    updateProfile() {
-        console.log('SAVING profile...');
-
-        var data = this.getProfileInputs();
-        var endpoint = getFullEndpoint(endpoints.UpdateProfile, false);
-
-        fetch(endpoint, {
-            method: endpoints.UpdateProfile.method,
-            headers: {
-                "Authorization": "Bearer " + localStorage.getItem('DateApplication'),
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(data)
-        }).then((res) => {
-            if (!res.ok) {
-                console.error("error during updating profile.");
-            }
-            else {
-                console.log("update profile was successful!");
-                //return res.json();
-            }
-        }).then(() => {
-            this.setState({
-                updated: true,
-                updating: false
-            })
-        }
-        ).then(() => {
-            this.props.onSave();
-        })
-    }*/
+    
     onSave() {
         console.log('saving started');
         //console.log("Profile is: " + JSON.stringify(this.getProfileInputs()));
         this.setState({
-            updating: true
+            loading: true
         });
         if(this.props.Clicked == "email"){
             this.updateEmail();
@@ -199,9 +177,6 @@ class CredentialChangeButtons extends React.Component {
         else{
             return;
         }
-        //this.updateProfile();
-
-        //console.log("Profile is: " + JSON.stringify(this.getProfileInputs()));
 
     }
     onEmailChange() {
@@ -227,14 +202,7 @@ class CredentialChangeButtons extends React.Component {
                                 maxLength="25">
                             </input>
                         </div>
-                        <div id="current-email-container-for-email" className="input-line input-box">
-                            <label htmlFor="current-email-input-for-email">A jelenlegi e-mail címed:</label>
-                            <input className="inputField"
-                                type="text"
-                                id="current-email-input-for-email"
-                                maxLength="25">
-                            </input>
-                        </div>
+                        
                         <div id="current-password-container-for-email" className="input-line input-box">
                             <label htmlFor="current-password-input-for-email">A jelenlegi jelszavad:</label>
                             <input className="inputField"
@@ -253,14 +221,7 @@ class CredentialChangeButtons extends React.Component {
                                 maxLength="25">
                             </input>
                         </div>
-                        <div id="current-email-container-for-password" className="input-line input-box">
-                            <label htmlFor="current-email-input-for-password">A jelenlegi e-mail címed:</label>
-                            <input className="inputField"
-                                type="text"
-                                id="current-email-input-for-password"
-                                maxLength="25">
-                            </input>
-                        </div>
+                        
                         <div id="current-password-container-for-password" className="input-line input-box">
                             <label htmlFor="current-password-input-for-password">A jelenlegi jelszavad:</label>
                             <input className="inputField"
@@ -272,9 +233,13 @@ class CredentialChangeButtons extends React.Component {
                     </div>
                 </div>
                 <div className="main-holder">
+                    <p className={this.state.result.success ? "success-notification" : "error-notification"} style={this.state.result.description === null ? {display : 'none'} : {display:'block'}}>
+                       {this.state.result.description}
+                   </p>
                     <button
-                        className={this.state.updating ? "main-button loading-button" : "main-button"}
-                        onClick={this.state.updating ? () => { } : () => this.onSave()}>{this.state.updating ? "Továbbítás alatt..." : "Mentés"}</button>
+                        className={this.state.loading ? "main-button loading-button" : "main-button"}
+                        onClick={this.state.loading ? () => { } : () => this.onSave()}>{this.state.loading ? "Továbbítás alatt..." : "Mentés"}</button>
+                   
                 </div>
             </div>
         )

@@ -114,3 +114,9 @@ button.main-button:hover{
     background-color: #582570;
     cursor: pointer;
 }
+.success-notification{
+    color: chartreuse;
+}
+.error-notification{
+    color: red;
+}
