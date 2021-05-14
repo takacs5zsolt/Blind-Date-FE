@@ -1,6 +1,6 @@
 import React from 'react';
 
-import '../SectionH.css';
+import '../../SectionH/SectionH.css';
 
 import { getFullEndpoint, endpoints } from '../../../REST_API_COMMUNICATION/dateApi';
 import { getToken, saveToken } from '../../../REST_API_COMMUNICATION/token';

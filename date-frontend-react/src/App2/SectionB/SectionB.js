@@ -37,6 +37,11 @@ class SectionB extends React.Component {
     componentDidMount() {
 
     }
+    componentWillReceiveProps(nextProps){
+        this.setState({
+            clickedButton : null
+        })
+    }
     onSave() {
         this.props.onSave();
     }

@@ -26,7 +26,7 @@ class EditableProfile extends React.Component {
         super(props);
         this.props = props;
         this.state = {
-            clickedButton = this.props.ClickedButton
+            clickedButton: null
         }
 
     }
@@ -40,7 +40,10 @@ class EditableProfile extends React.Component {
         /*
         */
         if (this.props.ClickedButton != null) {
-            <CredentialChangeButtons Clicked={this.props.ClickedButton} />
+            return (
+
+                <CredentialChangeButtons Clicked={this.props.ClickedButton} />
+            );
         }
         else {
 

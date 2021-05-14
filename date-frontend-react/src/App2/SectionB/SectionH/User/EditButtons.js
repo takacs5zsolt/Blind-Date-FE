@@ -157,7 +157,7 @@ class EditButtons extends React.Component {
                         onClick={()=>this.onExit()}>Kilépés</button>
                 </div>
                 <div className="main-holder">
-                    buttonToShow
+                    {buttonToShow}
                 </div>
             </div>
         )
