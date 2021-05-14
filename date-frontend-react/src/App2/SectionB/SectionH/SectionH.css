@@ -114,9 +114,19 @@ button.main-button:hover{
     background-color: #582570;
     cursor: pointer;
 }
-.success-notification{
+p.success-notification{
     color: chartreuse;
+    font-weight: bold;
+    line-height: 5px;
 }
-.error-notification{
+p.error-notification{
     color: red;
+    font-weight: bold;
+    line-height: 1;
+}
+.button-holder{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 300px;
+    text-align: center;
 }

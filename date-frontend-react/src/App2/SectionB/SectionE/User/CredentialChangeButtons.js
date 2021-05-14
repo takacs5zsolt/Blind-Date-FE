@@ -55,6 +55,13 @@ class CredentialChangeButtons extends React.Component {
             }
         })
     }
+    restoreData(){
+        var value1ToRestore = this.props.Clicked == "email" ? "new-email-input-for-email" : "new-password-input-for-password";
+        var value2ToRestore = this.props.Clicked == "email" ? "current-password-input-for-email" : "current-password-input-for-password";
+
+        document.getElementById(value1ToRestore).value = "";
+        document.getElementById(value2ToRestore).value = "";
+    }
     updateEmail() {
         console.log('SAVING email...');
 
@@ -89,11 +96,13 @@ class CredentialChangeButtons extends React.Component {
                         success: true
                     }
                 })
+                this.restoreData();
                 return res.json();
             }
         }).then((res) => {
             this.setState({
                 result:{
+                    success: this.state.result.success,
                     description: this.state.result.success ? res : res.Message
                 }
             })
@@ -142,11 +151,13 @@ class CredentialChangeButtons extends React.Component {
                         success: true
                     }
                 })
+                this.restoreData();
                 return res.json();
             }
         }).then((res) => {
             this.setState({
                 result:{
+                    success: this.state.result.success,
                     description: this.state.result.success ? res : res.Message
                 }
             })
@@ -156,7 +167,8 @@ class CredentialChangeButtons extends React.Component {
             console.log(error);
             this.setState({
                 result:{
-                    description:"NINCS KAPCSOLAT"
+                    success: false,
+                    description:"NINCS KAPCSOLAT..."
                 }
             })
         });
@@ -232,7 +244,7 @@ class CredentialChangeButtons extends React.Component {
                         </div>
                     </div>
                 </div>
-                <div className="main-holder">
+                <div className="button-holder">
                     <p className={this.state.result.success ? "success-notification" : "error-notification"} style={this.state.result.description === null ? {display : 'none'} : {display:'block'}}>
                        {this.state.result.description}
                    </p>
