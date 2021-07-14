@@ -30,16 +30,16 @@ class SectionB extends React.Component {
     constructor(props) {
         super(props);
         this.props = props;
-        this.state ={
-            clickedButton : null
+        this.state = {
+            clickedButton: null
         }
     }
     componentDidMount() {
 
     }
-    componentWillReceiveProps(nextProps){
+    componentWillReceiveProps(nextProps) {
         this.setState({
-            clickedButton : null
+            clickedButton: null
         })
     }
     onSave() {
@@ -48,19 +48,19 @@ class SectionB extends React.Component {
     onVote(activity) {
         this.props.onVote(activity);
     }
-    onEmailChange(){
+    onEmailChange() {
         this.setState({
-            clickedButton : "email"
+            clickedButton: "email"
         })
     }
-    onPasswordChange(){
+    onPasswordChange() {
         this.setState({
-            clickedButton : "password"
+            clickedButton: "password"
         })
     }
-    onCancel(){
+    onCancel() {
         this.setState({
-            clickedButton : null
+            clickedButton: null
         })
     }
     render() {
@@ -73,21 +73,21 @@ class SectionB extends React.Component {
 
         if (this.props.ViewedProfile.ProfileType == "FullUserProfile") {
             return (
-                    <>
-                    <EditButtons onSave={this.onSave.bind(this)} 
-                        onEmailClick={this.onEmailChange.bind(this)} 
+                <>
+                    <EditButtons onSave={this.onSave.bind(this)}
+                        onEmailClick={this.onEmailChange.bind(this)}
                         onPasswordClick={this.onPasswordChange.bind(this)}
-                        onCancel={this.onCancel.bind(this)}/>
+                        onCancel={this.onCancel.bind(this)} />
                     <div className='e-container'>
-                        <EditableProfile Profile={this.props.Profile} ClickedButton={this.state.clickedButton}/>
+                        <EditableProfile Profile={this.props.Profile} ClickedButton={this.state.clickedButton} />
                     </div>
-                    </>
+                </>
 
             );
         }
         else {
             return (
-                    <>
+                <>
                     <div className="h">
                         <ChatProfile Profile={this.props.ViewedProfile} />
                         <Abilities Profile={this.props.ViewedProfile} onVote={this.onVote.bind(this)} />
@@ -95,7 +95,7 @@ class SectionB extends React.Component {
                     <div className='e-container'>
                         <Chat Profile={this.props.Profile} ViewedProfile={this.props.ViewedProfile} />
                     </div>
-                    </>
+                </>
 
             );
         }
