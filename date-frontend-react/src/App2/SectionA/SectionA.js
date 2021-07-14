@@ -66,13 +66,13 @@ class SectionA extends React.Component {
    }
     render() {
         return (
-            <div id="section-a" className="column1">
+            <>
                 <LogoComponent />
                 <SeparatorLine />
                 <UserProfileDataComponent Profile={this.props.Profile} onClick={this.handleClick.bind(this)} />
                 <SeparatorLine Height={3} />
                 <MatchContainer onClick={this.props.onClick} />
-            </div>
+            </>
         )
     }
 }
