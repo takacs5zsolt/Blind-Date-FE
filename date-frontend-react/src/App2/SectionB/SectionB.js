@@ -73,8 +73,7 @@ class SectionB extends React.Component {
 
         if (this.props.ViewedProfile.ProfileType == "FullUserProfile") {
             return (
-                <div id="section-b" className="column2">
-                    <UtilitySection />
+                    <>
                     <EditButtons onSave={this.onSave.bind(this)} 
                         onEmailClick={this.onEmailChange.bind(this)} 
                         onPasswordClick={this.onPasswordChange.bind(this)}
@@ -82,13 +81,13 @@ class SectionB extends React.Component {
                     <div className='e-container'>
                         <EditableProfile Profile={this.props.Profile} ClickedButton={this.state.clickedButton}/>
                     </div>
-                </div>
+                    </>
+
             );
         }
         else {
             return (
-                <div id="section-b" className="column2">
-                    <UtilitySection />
+                    <>
                     <div className="h">
                         <ChatProfile Profile={this.props.ViewedProfile} />
                         <Abilities Profile={this.props.ViewedProfile} onVote={this.onVote.bind(this)} />
@@ -96,7 +95,8 @@ class SectionB extends React.Component {
                     <div className='e-container'>
                         <Chat Profile={this.props.Profile} ViewedProfile={this.props.ViewedProfile} />
                     </div>
-                </div>
+                    </>
+
             );
         }
         /*

@@ -46,6 +46,8 @@ import SeparatorLine from './SeparatorLine/Separator';
 import UserProfileDataComponent from './UserProfileDataComponent/UserProfileDataComponent';
 import MatchContainer from './SectionA/SectionD/MatchContainer';
 
+import UtilitySection from './SectionB/SectionG/UtilitySection';
+
 import Home from '../Components/HomePage/HomePage';
 
 class WebApp extends React.Component {
@@ -213,6 +215,9 @@ class WebApp extends React.Component {
                             <UserProfileDataComponent Profile={this.state.userProfile} onClick={this.onCurrentViewedIDChange.bind(this)} />
                             <SeparatorLine Height={3} />
                             <MatchContainer onClick={this.onCurrentViewedIDChange.bind(this)} />
+                        </div>
+                        <div id="section-b" className="column2">
+                            <UtilitySection />
                         </div>
                         <SectionB Profile={this.state.userProfile} ViewedProfile={this.state.currentViewedProfile} onVote={this.onVote.bind(this)} onSave={this.onSave.bind(this)} />
                         <SectionC ViewedProfile={this.state.currentViewedProfile} onVote={this.onVote.bind(this)} onSave={this.onSave.bind(this)}/>
