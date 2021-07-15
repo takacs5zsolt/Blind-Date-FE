@@ -50,6 +50,8 @@ import UtilitySection from './SectionB/SectionG/UtilitySection';
 
 import Home from '../Components/HomePage/HomePage';
 
+import LoadingSpinner from './LoadingSpinner/LoadingSpinner';
+
 class WebApp extends React.Component {
     constructor(props) {
         super(props);
@@ -200,7 +202,7 @@ class WebApp extends React.Component {
             }
             else {
 
-                /*return (
+                /*asdreturn (
                     <div className="AppContainer">
                     <SectionA Profile={this.state.profile} Matches={this.state.Matches} onClick={this.onCurrentViewedIDChange} />
                     <SectionB Profile={this.state.profile} ViewedID={this.state.currentViewedID} onVote={this.onVote} onSave={this.onSave()} />
@@ -209,6 +211,7 @@ class WebApp extends React.Component {
                 
                 return (
                     <div className="AppContainer">
+                        <LoadingSpinner />
                         <div id="section-a" className="column1">
                             <LogoComponent />
                             <SeparatorLine />
