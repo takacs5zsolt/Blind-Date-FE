@@ -3,8 +3,6 @@ import React from 'react';
 import '../../SectionH/SectionH.css';
 
 import { getFullEndpoint, endpoints } from '../../../REST_API_COMMUNICATION/dateApi';
-import { getToken, saveToken } from '../../../REST_API_COMMUNICATION/token';
-import noUiSlider from "nouislider";
 
 
 
@@ -20,14 +18,6 @@ class CredentialChangeButtons extends React.Component {
             }
         }
     }
-    /*
-    componentWillMount() {
-        this.setState({
-            updating: false,
-            updated: false
-        })
-    }
-    */
     getEmailInputs() {
         var currentPassword = document.getElementById('current-password-input-for-email').value;
         var newEmail = document.getElementById('new-email-input-for-email').value;
@@ -110,6 +100,7 @@ class CredentialChangeButtons extends React.Component {
         )
         .catch(error => {
             console.log(error);
+
             this.setState({
                 result:{
                     success: false,
@@ -176,10 +167,11 @@ class CredentialChangeButtons extends React.Component {
     
     onSave() {
         console.log('saving started');
-        //console.log("Profile is: " + JSON.stringify(this.getProfileInputs()));
+
         this.setState({
             loading: true
         });
+
         if(this.props.Clicked == "email"){
             this.updateEmail();
         }

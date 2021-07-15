@@ -1,16 +1,4 @@
 import React from 'react';
-/*
-import '../Global/Global.css';
-import './ChatProfile.css';
-import {
-    Route,
-    NavLink,
-    HashRouter
-} from "react-router-dom";
-import {createPhotoURL} from '../Global/ImageHandler';
-
-import './SectionH.css';
-*/
 
 import './Chat.css';
 import ChatBubble from './ChatBubble';
@@ -25,31 +13,12 @@ class Chat extends React.Component {
             messages:null,
             loading:true
         }
-        /*
-        this.state = {
-            viewedID: props.ViewedID,
-            messages: null,
-            loading: true
-        };
-        */
-        //state;
     }
     componentDidMount() {
         this.getMessages();
     }
     componentWillReceiveProps(newProps) {
         this.setState({messages:null, loading:true});
-        /* GOOD
-        if (newProps.ViewedID !== this.state.viewedID)
-            this.setState({ viewedID: newProps.ViewedID, loading: true });
-            */
-
-
-            /*
-        if (newProps.SentMessage !== null) {
-            this.setState({ messages: this.state.messages.push(newProps.SentMessage) })
-        }
-        */
     }
 
     componentDidUpdate() {
@@ -76,7 +45,6 @@ class Chat extends React.Component {
             }
         }).then((data) => {
             this.setState({
-                //viewedProfile: data.Profile,
                 messages: data.Messages,
                 loading: false
             });

@@ -1,23 +1,10 @@
 import React from 'react';
-/*
-import '../Global/Global.css';
-import './ChatProfile.css';
-import {
-    Route,
-    NavLink,
-    HashRouter
-} from "react-router-dom";
-import {createPhotoURL} from '../Global/ImageHandler';
-
-import './SectionH.css';
-*/
 
 import Date from './Date';
 import Match from './Match';
 import SeparatorLine from '../../SeparatorLine/Separator'
 
 import { getFullEndpoint, endpoints} from '../../REST_API_COMMUNICATION/dateApi';
-import { getToken, saveToken } from '../../REST_API_COMMUNICATION/token';
 
 class MatchContainer extends React.Component {
     constructor(props) {
@@ -28,7 +15,6 @@ class MatchContainer extends React.Component {
             date: null,
             loading: true
         };
-        //state;
     }
     componentDidMount() {
         this.fetchMatches();
@@ -61,7 +47,6 @@ class MatchContainer extends React.Component {
     componentWillReceiveProps(newProps) {
         if (newProps !== this.props)
             this.fetchMatches();    
-        //this.state = { profile: newProps.Profile, matches: newProps.Matches }
     }
     handleClick(profile){
         this.props.onClick(profile);
