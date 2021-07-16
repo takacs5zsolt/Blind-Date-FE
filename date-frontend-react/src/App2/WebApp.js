@@ -41,12 +41,12 @@ import UserProfileDataComponent from './UserProfileDataComponent/UserProfileData
 import MatchContainer from './SectionA/SectionD/MatchContainer';
 import SectionB from './SectionB/SectionB';
 
-import LogoComponent from './LogoComponent/LogoComponent';
-import SeparatorLine from './SeparatorLine/Separator';
-import UserProfileDataComponent from './UserProfileDataComponent/UserProfileDataComponent';
-import MatchContainer from './SectionA/SectionD/MatchContainer';
+//import LogoComponent from './LogoComponent/LogoComponent';
+//import SeparatorLine from './SeparatorLine/Separator';
+//import UserProfileDataComponent from './UserProfileDataComponent/UserProfileDataComponent';
+//import MatchContainer from './SectionA/SectionD/MatchContainer';
 
-import UtilitySection from './SectionB/SectionG/UtilitySection';
+//import UtilitySection from './SectionB/SectionG/UtilitySection';
 
 import Home from '../Components/HomePage/HomePage';
 
@@ -99,7 +99,7 @@ class WebApp extends React.Component {
         })
     }*/
     getProfile() {
-        var endpoint = getFullEndpoint(endpoints.ViewProfile, false);
+        var endpoint = getFullEndpoint(endpoints.ViewProfile, false) + '/0';
 
         fetch(endpoint, {
             method: endpoints.ViewProfile.method,
@@ -226,6 +226,7 @@ class WebApp extends React.Component {
                         <SectionC ViewedProfile={this.state.currentViewedProfile} onVote={this.onVote.bind(this)} onSave={this.onSave.bind(this)}/>
                     </div>
                 );
+                
             }
         }
     }
