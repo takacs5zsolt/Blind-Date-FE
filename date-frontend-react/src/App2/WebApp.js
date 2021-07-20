@@ -197,7 +197,7 @@ class WebApp extends React.Component {
             */
             if (this.state.loading) {
                 return (<div className="AppContainer">
-                    <p>LOADING...</p>
+                    <LoadingSpinner/>
                 </div>);
             }
             else {
@@ -211,7 +211,6 @@ class WebApp extends React.Component {
                 
                 return (
                     <div className="AppContainer">
-                        <LoadingSpinner />
                         <div id="section-a" className="column1">
                             <LogoComponent />
                             <SeparatorLine />
@@ -221,8 +220,8 @@ class WebApp extends React.Component {
                         </div>
                         <div id="section-b" className="column2">
                             <UtilitySection />
+                            <SectionB Profile={this.state.userProfile} ViewedProfile={this.state.currentViewedProfile} onVote={this.onVote.bind(this)} onSave={this.onSave.bind(this)} />
                         </div>
-                        <SectionB Profile={this.state.userProfile} ViewedProfile={this.state.currentViewedProfile} onVote={this.onVote.bind(this)} onSave={this.onSave.bind(this)} />
                         <SectionC ViewedProfile={this.state.currentViewedProfile} onVote={this.onVote.bind(this)} onSave={this.onSave.bind(this)}/>
                     </div>
                 );
