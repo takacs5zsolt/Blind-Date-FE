@@ -8,7 +8,10 @@
     filter: sepia(100%);
     
 }
-
+.spinner-holder{
+    display: flex;
+    justify-content: center;
+}
 @keyframes spinning{
     0%{
         transform: rotate(0deg) scale(1.3);

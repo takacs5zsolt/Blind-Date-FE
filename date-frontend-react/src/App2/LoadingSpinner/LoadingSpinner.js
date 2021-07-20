@@ -10,7 +10,7 @@ class LoadingSpinner extends React.Component {
 
     render() {
         return(
-            <div>
+            <div className="spinner-holder">
                 <img src={loading} className="spinner" />
             </div>
         )
