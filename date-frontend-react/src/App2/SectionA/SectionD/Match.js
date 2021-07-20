@@ -41,7 +41,7 @@ class Match extends React.Component {
         var messageContent = this.props.Match.Messages[0].Content.length > 25 ? this.props.Match.Messages[0].Content.substring(0,26) + '...' : this.props.Match.Messages[0].Content;
 
         return(
-            <div id={"match-" + this.props.Match.Profile.UserID} className="match-button-new" id={mainID} onClick={this.handleClick.bind(this)}>
+            <div className="match-button-new" id={mainID} onClick={this.handleClick.bind(this)}>
                 <div className="match-picture-container">
                     <img className="match-picture" src={this.props.Match.Profile.Photo1}></img>
                 </div>
