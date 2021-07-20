@@ -20,6 +20,7 @@ import EditableProfile from './SectionE/User/EditableProfile';
 import ChatProfile from './SectionH/Other/ChatProfile/ChatProfile';
 import Abilities from './SectionH/Other/Abilities/Abilities';
 import Chat from './SectionE/Other/Chat';
+import LoadingSpinner from '../LoadingSpinner/LoadingSpinner';
 
 import ProfilePage from '../SectionC/SectionF/ProfilePage/ProfilePage';
 import PhotoSection from '../SectionC/SectionF/PhotoSection/PhotoSection';
@@ -67,7 +68,7 @@ class SectionB extends React.Component {
         console.log("SECTION B: current viewedID is " + this.props.ViewedID);
         if (this.props.Profile == null) {
             return (
-                <p>LOADING...</p>
+                <LoadingSpinner/>
             );
         }
 

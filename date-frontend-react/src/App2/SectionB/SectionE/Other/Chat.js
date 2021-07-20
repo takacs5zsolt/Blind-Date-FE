@@ -4,6 +4,7 @@ import './Chat.css';
 import ChatBubble from './ChatBubble';
 import { getFullEndpoint, endpoints } from '../../../REST_API_COMMUNICATION/dateApi';
 import ChatInput from './ChatInput';
+import LoadingSpinner from '../../../LoadingSpinner/LoadingSpinner';
 
 class Chat extends React.Component {
     constructor(props) {
@@ -58,7 +59,7 @@ class Chat extends React.Component {
         if (this.state.loading) {
             return (
                 <div>
-                    <p>Loading...</p>
+                    <LoadingSpinner/>
                 </div>
             )
         }
