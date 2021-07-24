@@ -52,6 +52,14 @@ import Home from '../Components/HomePage/HomePage';
 
 import LoadingSpinner from './LoadingSpinner/LoadingSpinner';
 
+const signalR =  require("@microsoft/signalr");
+let connection = new signalR.HubConnectionBuilder()
+        .withUrl("http://localhost:50144/signalr/notificationhub")
+        .withAutomaticReconnect()
+        .build();
+
+connection.start().then(() => alert("connection established!"));
+
 class WebApp extends React.Component {
     constructor(props) {
         super(props);
@@ -62,8 +70,6 @@ class WebApp extends React.Component {
             loading:true
         }
     }
-
-
     getToken() {
         var token = localStorage.getItem('DateApplication');
         if (token != null) {
