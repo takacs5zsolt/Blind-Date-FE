@@ -68,6 +68,7 @@ class Photo extends React.Component {
                         src={this.props.Photo === "" ? uploadIcon : this.props.Photo}
                         onClick={this.props.Photo === "" ? ()=>this.handleUpload() : ()=>this.handleDelete()}
                     ></img>
+                    <Modal Photo={this.props.Photo} onClose={this.onModalClose.bind(this)} isActive={this.state.isModalActive} />
                 </div>
             );
             
