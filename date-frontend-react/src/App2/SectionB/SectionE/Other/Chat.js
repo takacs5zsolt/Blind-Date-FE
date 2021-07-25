@@ -6,6 +6,10 @@ import { getFullEndpoint, endpoints } from '../../../REST_API_COMMUNICATION/date
 import ChatInput from './ChatInput';
 import LoadingSpinner from '../../../LoadingSpinner/LoadingSpinner';
 
+import Pusher from 'pusher-js';
+import authorizer from '../../../Pusher/pusher';
+
+
 class Chat extends React.Component {
     constructor(props) {
         super(props);
@@ -15,8 +19,31 @@ class Chat extends React.Component {
             loading:true
         }
     }
+    componentWillMount(){
+        var token = localStorage.getItem("DateApplication");
+
+        this.pusher = new Pusher("3f8c906f35c890687dc7",{
+            authEndpoint : 'http://localhost:50144/api/user/auth',
+            cluster: 'eu',
+            authorizer: authorizer
+        });
+        this.chatRoom = this.pusher.subscribe('private-'+this.props.Profile.UserID);
+        console.log('subscribed to private-' + this.props.Profile.UserID + ' channel.');
+        alert("subscribed to the private channel!");
+        this.chatRoom.bind('message_received', newMessage=>{
+            alert(newMessage);
+        });
+    }
+    handleIncomingMessage(message){
+        alert(message);
+    }
     componentDidMount() {
         this.getMessages();
+        
+        this.chatRoom.bind('message_received', newMessage =>{
+            //this.setState({messages: this.state.messages.concat(newMessage)}, this);
+            alert('new Message arrived!',newMessage);
+        })
     }
     componentWillReceiveProps(newProps) {
         this.setState({messages:null, loading:true});
