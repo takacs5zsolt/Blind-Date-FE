@@ -7,7 +7,7 @@ import ChatInput from './ChatInput';
 import LoadingSpinner from '../../../LoadingSpinner/LoadingSpinner';
 
 import Pusher from 'pusher-js';
-import authorizer from '../../../Pusher/pusher';
+import { almostOriginalAuthorizer } from '../../../Pusher/pusher';
 
 
 class Chat extends React.Component {
@@ -19,20 +19,10 @@ class Chat extends React.Component {
             loading:true
         }
     }
-    componentWillMount(){
-        var token = localStorage.getItem("DateApplication");
+    
 
-        this.pusher = new Pusher("3f8c906f35c890687dc7",{
-            authEndpoint : 'http://localhost:50144/api/user/auth',
-            cluster: 'eu',
-            authorizer: authorizer
-        });
-        this.chatRoom = this.pusher.subscribe('private-'+this.props.Profile.UserID);
-        console.log('subscribed to private-' + this.props.Profile.UserID + ' channel.');
-        alert("subscribed to the private channel!");
-        this.chatRoom.bind('message_received', newMessage=>{
-            alert(newMessage);
-        });
+    componentWillMount(){
+        
     }
     handleIncomingMessage(message){
         alert(message);
@@ -40,10 +30,49 @@ class Chat extends React.Component {
     componentDidMount() {
         this.getMessages();
         
-        this.chatRoom.bind('message_received', newMessage =>{
-            //this.setState({messages: this.state.messages.concat(newMessage)}, this);
-            alert('new Message arrived!',newMessage);
+        var token = localStorage.getItem("DateApplication");
+
+        var channelName = 'private-'+this.props.Profile.UserID;
+        console.log('channel name:', channelName);
+
+        Pusher.log = (message) =>{
+            window.console.log(message);
+        }
+        Pusher.logToConsole = true;
+
+        const pusher = new Pusher("3f8c906f35c890687dc7",{
+                authEndpoint : 'http://localhost:50144/api/user/auth',
+                cluster: 'eu'
+                //authorizer: almostOriginalAuthorizer
+            });
+        
+        pusher.connection.bind("connected",()=>{
+            console.log("REALTIME IS GO!");
+        });
+        console.log('pusher object created @ ', pusher);
+        
+        const channel = pusher.subscribe(channelName);
+        const bind = channel.bind('message_received', (data)=>{
+            console.clear();
+            console.log(data);
         })
+
+        channel.bind("pusher:subscription_error",(error)=>{
+            console.log("subscription error @ ", error);
+        });
+
+        channel.bind("pusher:subscription_succeeded",() =>{
+            console.log("subscription succeeded!");
+        });
+
+        channel.bind('message_received', (message) =>{
+            console.clear();
+            console.log(message);
+        });
+
+        console.log('events binded');
+
+        
     }
     componentWillReceiveProps(newProps) {
         this.setState({messages:null, loading:true});
